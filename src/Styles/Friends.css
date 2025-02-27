@@ -1,0 +1,101 @@
+.friend-card {
+    width: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    text-align: center;
+}
+
+
+.friend-avatar {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+}
+
+.friend-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    h3 {
+        width: 80%;
+        height: 50px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        /* Asegura que el texto no se divida en varias líneas */
+        display: block;
+        /* Asegura que el elemento se comporte como un bloque */
+    }
+
+    p {
+        height: 50px;
+        white-space: nowrap;
+        /* Evita que el texto se divida en varias líneas */
+        overflow: hidden;
+        /* Oculta el texto que excede el contenedor */
+        text-overflow: ellipsis;
+    }
+
+    .friend-actions-message {
+        padding: 10px 5px 5px 5px;
+        cursor: pointer;
+        position: relative;
+
+        img{
+            width: 50px;
+            border-radius: 50%;
+        }
+
+        .unread-count{
+            position: absolute;
+            top: -5px;
+            right: -5px;
+            background-color: #007bff;
+            color: white;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            font-size: 15px;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}
+
+.friends-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+/* Estilos para el buscador */
+.friend-search {
+    width: 100%;
+    padding: 10px 15px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    border: 3px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.friend-search:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.friend-search::placeholder {
+    color: #aaa;
+    font-style: italic;
+}
+

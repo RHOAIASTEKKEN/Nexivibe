@@ -1,0 +1,94 @@
+.cardMenu {
+    width: 225px;
+    height: 89vh;
+    padding: 20px 5px;
+    box-shadow: 0 4px 6px rgba(147, 51, 234, 0.5);
+    border-radius: 6px;
+}
+.menu-list {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.menu-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    cursor: pointer;
+    width: 100%;
+    white-space: nowrap;
+    padding: 0 !important;
+}
+.menu-button {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 16px;
+    padding: 16px;
+    font-weight: 600;
+    border-radius: 9999px;
+    background-color: transparent;
+    color: #4a5568;
+    transition: all 0.2s ease-in-out;
+}
+
+.menu-button:hover {
+    background-color: rgba(237, 233, 254, 1);
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.menu-button:focus {
+    background: linear-gradient(to right, #9333ea, #6b21a8);
+    color: white;
+}
+.icon {
+    width: 24px;
+    height: 24px;
+}
+.menu-button:focus .icon {
+    fill: white;
+    stroke: white;
+}
+
+.search-container {
+    position: relative;
+    width: 100%;
+    padding: 0 !important;
+}
+
+.search-dropdown {
+    margin-top: 5px;
+    width: 100%;
+    background: white;
+    padding: 0.5rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    border-radius: 4px;
+}
+
+.search-form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.search-input {
+    flex: 1;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.search-submit {
+    padding: 0.5rem 1rem;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.search-submit:hover {
+    background: #0056b3;
+}

@@ -1,0 +1,14 @@
+:root {
+    /* Primary Colors */
+    --tekken-neon-blue: #00F0FF;
+    --tekken-dark-blue: #0B1933;
+    --tekken-white: #FFFFFF;
+    --tekken-metallic-gray: #808080;
+    --tekken-black: #000000;
+    --tekken-neon-pink: #FF69B4;
+
+    /* Gradient Combinations */
+    --tekken-blue-gradient: linear-gradient(45deg, var(--tekken-dark-blue), var(--tekken-neon-blue));
+    --tekken-metallic-gradient: linear-gradient(180deg, var(--tekken-white), var(--tekken-metallic-gray));
+    --tekken-glow-effect: 0 0 10px var(--tekken-neon-blue);
+}

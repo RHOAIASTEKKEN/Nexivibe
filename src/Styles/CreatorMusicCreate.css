@@ -1,0 +1,182 @@
+/* Contenedor principal */
+.music-create-container {
+    max-width: 1000px;
+    margin: 20px;
+    padding: 30px;
+    background: linear-gradient(145deg, #1e1e1e, #333333);
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Título del formulario */
+.form-title {
+    font-size: 28px;
+    font-weight: bold;
+    text-align: center;
+    color: #e1e1e1;
+    text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.5);
+    margin-bottom: 20px;
+}
+
+/* Estilos del formulario */
+.music-form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    flex: 1 1 calc(33% - 20px); /* Distribuye los campos de manera responsiva */
+}
+
+.form-group label {
+    font-size: 14px;
+    font-weight: 500;
+    color: #bbb;
+}
+
+.form-group input[type="text"],
+.form-group textarea {
+    padding: 12px;
+    border: 2px solid #555;
+    border-radius: 8px;
+    font-size: 14px;
+    background-color: #2b2b2b;
+    color: #fff;
+    transition: all 0.3s ease;
+    box-shadow: inset 0 0 5px rgba(255, 255, 255, 0.1);
+}
+
+.form-group input[type="text"]:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #9b59b6;
+    box-shadow: 0 0 10px rgba(155, 89, 182, 0.7);
+}
+
+.file-input {
+    padding: 10px;
+    border: 2px dashed #444;
+    border-radius: 8px;
+    cursor: pointer;
+    background: linear-gradient(145deg, #555, #444);
+}
+
+.file-input:hover {
+    border-color: #9b59b6;
+    background: linear-gradient(145deg, #444, #555);
+}
+
+.image-preview {
+    max-width: 160px;
+    max-height: 160px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-top: 10px;
+}
+
+.file-name {
+    font-size: 12px;
+    color: #bbb;
+    margin-top: 4px;
+}
+
+.error-message {
+    color: #e74c3c;
+    font-size: 12px;
+    margin-top: 4px;
+}
+
+/* Mensajes de error */
+.submit-error {
+    background-color: rgba(255, 82, 82, 0.1);
+    border: 1px solid #e74c3c;
+    padding: 12px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+/* Botón de envío */
+.submit-button {
+    background: linear-gradient(145deg, #9b59b6, #4a90e2);
+    color: white;
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    box-shadow: 0 0 15px rgba(155, 89, 182, 0.5);
+}
+
+.submit-button:hover {
+    background: linear-gradient(145deg, #4a90e2, #9b59b6);
+}
+
+.submit-button:disabled {
+    background: #777;
+    cursor: not-allowed;
+}
+
+/* Estilos de archivo */
+input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #555;
+    border-radius: 8px;
+    font-size: 14px;
+    background-color: #2b2b2b;
+    color: #fff;
+}
+
+input[type="file"]::-webkit-file-upload-button {
+    background-color: #4a90e2;
+    color: white;
+    padding: 10px 14px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+input[type="file"]::-webkit-file-upload-button:hover {
+    background-color: #357abd;
+}
+
+/* Estilos para textarea */
+textarea {
+    resize: vertical;
+    min-height: 120px;
+    background-color: #2b2b2b;
+    color: #fff;
+    border: 2px solid #555;
+    border-radius: 8px;
+    padding: 12px;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .music-create-container {
+        padding: 20px;
+        margin: 15px;
+    }
+
+    .form-title {
+        font-size: 24px;
+    }
+
+    .music-form {
+        flex-direction: column;
+    }
+
+    .submit-button {
+        font-size: 14px;
+        padding: 12px;
+    }
+}

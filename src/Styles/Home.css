@@ -1,0 +1,319 @@
+@import url("../App.css");
+@import url(../Styles/paleta\ de\ colores\ de\ imagenes.css);
+
+:root {
+    --nav-bar: #A4A2A8;
+    /* Color suave para la barra de navegación */
+    --background-dark: linear-gradient(180deg, #3C3A42, #353741, #121A27);
+    /* Gradiente para el fondo */
+    --text-light: #E0E6F1;
+    /* Texto claro */
+    --text-muted: #B3B3B3;
+    /* Texto menos destacado */
+    --hover-light: rgba(255, 255, 255, 0.15);
+    /* Hover tenue */
+    --shadow-color: rgba(0, 0, 0, 0.25);
+    /* Sombra ligera */
+    --sidebar-bg: transparent;
+    /* Fondo transparente para las sidebars */
+    --content-bg: transparent;
+    /* Fondo transparente para el contenido central */
+    --details-bg: rgba(255, 255, 255, 0.455);
+    /* Fondo para detalles abiertos */
+    --toggle-bg: rgba(255, 255, 255, 0.1);
+    /* Fondo para botones de toggle */
+    --logout-red: #FF4D4D;
+    /* Rojo vibrante para logout */
+    --post-bg: rgba(255, 255, 255, 0.15);
+    /* Fondo semi-transparente para los posts */
+    --visible: rgb(105, 214, 240, 0.8);
+    --white: #fff;
+    --hover-light: rgba(105, 214, 240, 0.3);
+    --logout-red: #ff4d4d;
+    --toggle-bg: rgba(255, 255, 255, 0.1);
+}
+
+
+*,
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: var(--text-light);
+}
+
+i {
+    width: 30px;
+    font-size: 25px;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen';
+    background: var(--background-dark);
+    background-attachment: fixed;
+    /* Fija el fondo al viewport */
+    background-size: cover;
+    /* Asegura que el gradiente cubra toda la pantalla */
+    color: var(--text-light);
+}
+
+.home-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    background: var(--background-dark);
+    overflow: hidden;
+}
+
+.home-nav {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--background-dark);
+    background-attachment: fixed;
+    padding: 10px 20px;
+    border-bottom: 2px solid var(--nav-bar);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 20;
+}
+
+.home-nav div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.home-nav .logo {
+    width: 50px;
+    border-radius: 50%;
+}
+
+.nav-logo {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.nav-logo a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.nav-user {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.nav-profile-image {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 3px solid var(--white);
+}
+
+.home-content {
+    display: flex;
+    flex-grow: 1;
+    position: relative;
+    background: var(--background-dark);
+    top: 80px;
+    /* Matches the fixed nav height */
+    overflow: hidden;
+}
+
+.home-sidebar {
+    position: fixed;
+    top: 80px;
+    /* Matches the fixed nav height */
+    bottom: 0;
+    width: 230px;
+    background-color: var(--sidebar-bg);
+    padding: 40px 10px 10px;
+    overflow-y: auto;
+    transition: transform 0.3s ease;
+    z-index: 10;
+}
+
+.left-sidebar {
+    background-color: #121A27;
+    border-right: 1px solid var(--details-bg);
+    position: absolute;
+    top: 0;
+    z-index: 19;
+}
+
+.right-sidebar {
+    background-color: #121A27;
+    right: 0;
+    border-left: 1px solid var(--details-bg);
+}
+
+.home-sidebar details:hover {
+    background-color: var(--details-bg);
+    color: #121A27;
+}
+
+.home-central-content {
+    flex-grow: 1;
+    padding: 15px 5px;
+    background: var(--content-bg);
+    overflow-y: auto;
+    transition: margin 0.3s ease;
+    margin-bottom: 50px;
+    margin-top: -15px;
+}
+
+.home-central-content::-webkit-scrollbar {
+    width: 0px; /* Ancho del scrollbar */
+}
+
+.expanded-left {
+    margin-left: 240px;
+}
+
+.expanded-right {
+    margin-right: 240px;
+}
+
+@media (max-width: 900px) {
+
+    .expanded-left,
+    .expanded-right {
+        width: 70%;
+    }
+}
+
+.profile-section {
+    width: 100%;
+    height: 150px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.profile-image {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid var(--white);
+}
+
+ul {
+    width: 100%;
+    gap: 15px;
+}
+
+li {
+    width: 100%;
+    padding: 0 0 0 30px;
+    list-style: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+li:hover {
+    border-radius: 30px;
+    background-color: var(--details-bg);
+    color: #121A27;
+}
+
+/* Sidebar Toggle Buttons */
+.sidebar-toggle {
+    position: fixed;
+    top: 65px;
+    z-index: 20;
+    padding: 15px;
+    border: none;
+    width: 30px;
+    height: 30px;
+    background: var(--tekken-blue-gradient);
+    border-radius: 15px;
+    box-shadow: var(--tekken-glow-effect);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    color: var(--white);
+}
+
+.sidebar-toggle:hover {
+    transform: scale(1.1);
+    /* Agrandar el botón al pasar el cursor */
+    box-shadow: 0px 0px 15px 6px var(--tekken-blue-gradient);
+    /* Resplandor rosa en hover */
+}
+
+.sidebar-toggle:hover {
+    background-color: var(--details-bg);
+}
+
+.left-toggle {
+    left: 10px;
+    /* Width of sidebar */
+}
+
+.right-toggle {
+    right: 10px;
+    /* Width of sidebar */
+}
+
+/* Handling sidebar visibility */
+.left-sidebar.hidden {
+    transform: translateX(-100%);
+    margin-left: -250px;
+}
+
+.right-sidebar.hidden {
+    transform: translateX(100%);
+    margin-right: -250px;
+}
+
+
+.home-central-content.sidebar-left-hidden {
+    width: 75%;
+}
+
+.home-central-content.sidebar-right-hidden {
+    margin-right: 0;
+}
+
+.sidebar-toggle.visible {
+    background-color: var(--visible);
+    color: rgba(255, 255, 255, 0.95);
+    font-weight: bold;
+}
+
+.logout {
+    width: 100%;
+    color: #fff;
+    background-color: #000;
+    border: none;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px 0px var(--shadow-color);
+    font-weight: bold;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.logout:hover {
+    color: #000;
+    background-color: #fff;
+}
+
+@media (max-width: 645px) {
+    .home-central-content{
+        padding: 15px 0;
+    }
+}

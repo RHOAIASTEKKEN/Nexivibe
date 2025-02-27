@@ -1,0 +1,23 @@
+.savepost {
+    margin-top: 50px;
+}
+
+
+.container-post-views .prev-story-card {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.container-post-views .prev-story-card .story-card .story-media {
+    height: 150px;
+}
+
+.container-post-views .prev-story-card .imagen_post {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}

@@ -1,0 +1,43 @@
+.post-actions {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 16px;
+}
+
+.media-ActionBtn {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 8px;
+    background-color: #2a2a2a;
+    border: none;
+    border-radius: 8px;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.media-ActionBtn:hover {
+    background-color: #333;
+}
+
+.icon-post {
+    font-size: 18px;
+}
+
+.preview {
+    margin-top: 12px;
+}
+
+.preview img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.preview video {
+    max-width: 100%;
+    border-radius: 8px;
+}

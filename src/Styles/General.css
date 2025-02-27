@@ -1,0 +1,19 @@
+.amigos-cards .prev-story-card {
+    display: grid;
+    /* grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); */
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+
+    .story-card {
+        display: grid;
+        height: 370px;
+    }
+
+    .story-card[data-count="4"] {
+        grid-template-rows: 1fr 1fr 2fr 1fr;
+    }
+
+    .story-card[data-count="3"] {
+        grid-template-rows: 1fr 2fr 1fr;
+    }
+}

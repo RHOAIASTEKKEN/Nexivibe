@@ -1,0 +1,300 @@
+/* VideoPlayer.css */
+.video-player-container {
+    width: 300px;
+    height: 85vh;
+    display: flex;
+    justify-content: center;
+    background-color: #000;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+}
+
+.unmute-hint {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    margin-top: 4px;
+    pointer-events: none;
+}
+
+/* VideoPlayer.css */
+.video-player-container {
+    width: 300px;
+    height: 85vh;
+    display: flex;
+    justify-content: center;
+    background-color: #000;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+    scrollbar-width: thin; /* Para Firefox */
+    scrollbar-color: rgb(18,224,247) #000; /* Para Firefox */
+}
+
+/* Estilos para el scrollbar en navegadores WebKit (Chrome, Edge, Safari) */
+.video-player-container::-webkit-scrollbar {
+    width: 0px; /* Ancho del scrollbar */
+}
+
+.video-player-container::-webkit-scrollbar-track {
+    background: #000; /* Color de fondo del track */
+}
+
+.video-player-container::-webkit-scrollbar-thumb {
+    background: #888; /* Color del thumb (barra deslizante) */
+    border-radius: 4px; /* Bordes redondeados */
+}
+
+.video-player-container::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Color del thumb al pasar el mouse */
+}
+
+.video-container {
+    width: 100%;
+    height: 85vh;
+    position: relative;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+}
+
+.menu-icon {
+    background-color: #000;
+    font-size: 30px;
+    cursor: pointer;
+    position: absolute;
+    right: 10px;
+    z-index: 1000;
+}
+
+.video-player-container .menuVideo {
+    position: absolute;
+    top: 20px;
+    right: 10px;
+}
+
+.video-wrapper {
+    width: clamp(250px, 400px, 500px);
+    height: auto;
+}
+
+.video-container .video-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 82vh;
+}
+
+.video-element {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.play-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0.7;
+    transition: opacity 0.3s;
+    cursor: pointer;
+}
+
+.play-button {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    z-index: 10;
+}
+
+.play-button:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+    opacity: 1;
+}
+
+.sidebar-controls {
+    position: absolute;
+    right: 0px;
+    bottom: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5px;
+    gap: 10px;
+}
+
+.profile-picture {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: #fff;
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+
+.profile-image-video {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.icon-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    color: #fff;
+}
+
+.icon {
+    font-size: 22px;
+    width: 100%;
+    height: 100%;
+}
+
+.icon-text {
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+.bottom-info {
+    position: absolute;
+    bottom: 20px;
+    left: 15px;
+    right: 80px;
+    color: #fff;
+}
+
+.username {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.description {
+    font-size: 14px;
+    margin-bottom: 12px;
+}
+
+.sound-control {
+    position: absolute;
+    bottom: 20px;
+    right: 15px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 24px;
+}
+
+.dispNone {
+    display: none;
+}
+
+@media (min-width: 650px) {
+    .video-player-container {
+        width: 100%;
+        margin-top: 30px;
+    }
+
+    .video-wrapper {
+        max-width: 400px;
+    }
+}
+
+@media (max-width: 650px) {
+    .video-player-container {
+        width: 100%;
+        margin-top: 35px;
+    }
+}
+
+.progress-bar {
+    width: 100%;
+    height: 6px;
+    appearance: none;
+    outline: none;
+    cursor: pointer;
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+    z-index: 100;
+    padding: 2px;
+    outline: none; /* Elimina el contorno al hacer clic */
+}
+
+.progress-bar:focus {
+    outline: none; /* Asegura que no haya borde de selección */
+    box-shadow: none; /* Evita cualquier efecto de resaltado */
+}
+
+.progress-bar::-webkit-slider-runnable-track {
+    background: var(--tekken-blue-gradient);
+    height: 6px;
+    border-radius: 3px;
+}
+
+.progress-bar::-moz-range-track {
+    background: var(--tekken-blue-gradient);
+    height: 6px;
+    border-radius: 3px;
+}
+
+.progress-bar::-webkit-slider-thumb {
+    appearance: none;
+    width: 12px;
+    height: 12px;
+    background: #fff;
+    border: 2px solid var(--visible);
+    border-radius: 50%;
+    margin-top: -3px;
+    cursor: pointer;
+}
+
+.progress-bar::-moz-range-thumb {
+    width: 12px;
+    height: 12px;
+    background: #fff;
+    border: 2px solid var(--tekken-dark-blue);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.autoplay-permission {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.8);
+    padding: 15px;
+    border-radius: 8px;
+    z-index: 1000;
+}
+
+.autoplay-permission button {
+    background: #2196F3;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.autoplay-permission button:hover {
+    background: #1976D2;
+}
